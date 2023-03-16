@@ -31,9 +31,6 @@ ZMK_CONDITIONAL_LAYER(NAV NUM, FUN)
 #define BT2 BT_SEL 2
 #define BT3 BT_SEL 3
 
-#define MEH(key) LA(LS(LC(key)))
-#define HYP(key) LG(LA(LS(LC(key))))
-
 #define NAV_LEFT  &mt HOME     LEFT    // tap: left  | long-tap: beginning of line
 #define NAV_RIGHT &mt END      RIGHT   // tap: right | long-tap: end       of line
 #define NAV_UP    &mt LC(HOME) UP      // tap: up    | long-tap: beginning of document
@@ -79,12 +76,7 @@ ZMK_CONDITIONAL_LAYER(NAV NUM, FUN)
 /* Homerow mods */
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4 LB5 // left-hand keys
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5 // right-hand keys
-#define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                                  // thumb keys
-/*
-#define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4  // left-hand keys
-#define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right-hand keys
-#define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumb keys
-*/
+#define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                                 // thumb keys
 
 ZMK_BEHAVIOR(hml, hold_tap,  // left-hand HRMs
     flavor = "balanced";
@@ -124,7 +116,7 @@ ZMK_BEHAVIOR(num_layer_word, hold_tap,
 // mouse layer that deactivates automatically on all other keys, requires PR #1366
 ZMK_BEHAVIOR(smart_mouse, tri_state,
     bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
-    ignored-key-positions = <RT1 RT2 RT3 RM1 RM2 RM3 RH0 RH1>;  // mouse keys
+    ignored-key-positions = <RT0 RT1 RT2 RT3 RM0 RM1 RM2 RM3 RH0 RH1>;  // mouse keys
     ignored-layers = <MOUSE>;
 )
 
@@ -147,7 +139,7 @@ ZMK_BEHAVIOR(lt_bspc, hold_tap,
     bindings = <&mo>, <&bs_del>;
 )
 
-// tap: space | space + tap: dot -> space -> sticky shift | hold: activate layer
+// tap: space | shift + tap: dot -> space -> sticky shift | hold: activate layer
 ZMK_BEHAVIOR(dot_spc, macro,
     wait-ms = <0>;
     tap-ms = <5>;
@@ -234,7 +226,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp Z         &kp X         &kp C         &kp D         &kp V      X_MB     &kp K         &kp H        &kp COMMA     &kp DOT    &kp FSLH        X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                          &lt NAV SPACE   &lt MOUSE TAB   X_MH     &kp RET      &lt NUM BSPC                                           X_RH
+    X_LH                                          &lt_spc NAV 0 &lt MOUSE TAB   X_MH     NUM_WORD      &ss_cw                                                X_RH
 //╰──────╯                                         ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                        ╰──────╯
 )
 
@@ -254,11 +246,11 @@ ZMK_LAYER(nav,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     &kp ESC       ___           ___           ___           ___        X_MT     &kp LC(V)    &kp LC(C)     &kp LC(X)    &kp LC(Z)    &kp DEL       X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &sk LGUI      &sk LALT    &sk LCTRL     &sk LSHFT    &to MOUSE     X_MM     &kp LEFT     &kp DOWN      &kp UP       &kp RIGHT    &caps_word    X_RM
+    X_LM     &sk LGUI      &sk LALT    &sk LSHFT     &sk LCTRL    &to MOUSE     X_MM     &kp LEFT     &kp DOWN      &kp UP       &kp RIGHT    &kp RET       X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     ___           ___           ___           ___           ___        X_MB     &kp HOME     &kp PG_DN     &kp PG_UP    &kp END      &kp INS       X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                               ___           ___        X_MH     ___           ___                                                  X_RH
+    X_LH                                               ___           ___        X_MH     ___           CANCEL                                               X_RH
 //╰──────╯                                        ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                         ╰──────╯
 )
 
@@ -266,7 +258,7 @@ ZMK_LAYER(fun,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     &kp F12       &kp F7        &kp F8        &kp F9        ___        X_MT     &bt BT_CLR      ___          ___           ___          ___        X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &kp F11       &kp F4        &kp F5        &kp F6        ___        X_MM    &out OUT_USB  &sk LCTRL    &sk LSHFT    &sk LALT     &sk LGUI       X_RM
+    X_LM     &kp F11       &kp F4        &kp F5        &kp F6        ___        X_MM    &out OUT_USB  &sk LSHFT    &sk LCTRL    &sk LALT     &sk LGUI       X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp F10       &kp F1        &kp F2        &kp F3        ___        X_MB    &out OUT_BLE  &bt BT0      &bt BT1       &bt BT2      &bt BT3       X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
@@ -278,7 +270,7 @@ ZMK_LAYER(mouse,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     ___           ___           ___           ___        &to DEF       X_MT   &mwh SCROLL_LEFT &mwh SCROLL_DOWN &mwh SCROLL_UP &mwh SCROLL_RIGHT    ___   X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &sk LGUI      &sk LALT    &sk LCTRL     &sk LSHFT       ___        X_MM   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_UP   &mmv MOVE_RIGHT      ___   X_RM
+    X_LM     &sk LGUI      &sk LALT    &sk LSHFT     &sk LCTRL       ___        X_MM   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_UP   &mmv MOVE_RIGHT      ___   X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     ___           ___           ___           ___           ___        X_MB   &kp HOME         &kp PG_DN        &kp PG_UP      &kp END           &kp INS  X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤

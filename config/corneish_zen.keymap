@@ -1,14 +1,17 @@
 /* source keypos definitions */
 #include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
 
+#define MEH(key) LA(LS(LC(key)))
+#define HYP(key) LG(LA(LS(LC(key))))
+
 /* map Zen's extra keys */
-#define X_LH  &none  // thumb row, left
-#define X_RH  &none  // thumb row, right
-#define X_LT  &none
-#define X_LM  &none
+#define X_LH  &smart_mouse  // thumb row, left
+#define X_RH  &bs_del       // thumb row, right
+#define X_LT  &kp MEH(Q)
+#define X_LM  &kp MEH(A)
 #define X_LB  &none
 #define X_RT  &none
-#define X_RM  &none
+#define X_RM  &kp MEH(O)
 #define X_RB  &none
 
 /* activate bluetooth */

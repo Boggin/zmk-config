@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "*.razor": "html",
+    "*.keymap": "cpp"
+  }
+}
