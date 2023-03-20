@@ -6,7 +6,7 @@ layers:
   - [Toggle mic+cam, Q, W, F, P, B, J, L, U, Y, {t: '''', s: '"'}, '']
   - [Toggle mic, {t: A, h: ⌘}, {t: R, h: ⎇}, {t: S, h: ⇧}, {t: T, h: ⌃}, G, 
      M, {t: N, h: ⌃}, {t: E, h: ⇧}, {t: I, h: ⎇}, {t: O, h: ⌘}, Toggle camera]
-  - ['', Z, X, C, D, V, K, H, {t: ',', s: '<'}, {t: '.', s: '>'}, {t: '/', s: '?'}, '']
+  - ['', Z, X, C, D, V, K, H, {t: ',', s: ';'}, {t: '.', s: ':'}, {t: '?', s: '!'}, '']
   - [Smart Mouse, {t: ⎵, h: NAV}, {t: ↹, h: MOUSE},
      {t: Smart Num, h: NUM}, {t: Smart Shift, h: ⇧}, {t: '⌫', s: '⌦'}]
   COMBOS:
@@ -18,21 +18,21 @@ layers:
   - ['', {t: '[', s: '{'}, {t: '7', s: '&'}, {t: '8', s: '*'}, {t: '9', s: '('}, {t: ']', s: '}'}, '', '', '', '', '']
   - ['', '', {t: ';', s: ':'}, {t: '4', s: '$'}, {t: '5', s: '%'}, {t: '6', s: '^'}, {t: '=', s: '+'}, '', {h: ⌃}, {h: ⇧}, {h: ⎇}, {h: ⌘}, '']
   - ['', {t: '`', s: '~'}, {t: '1', s: '!'}, {t: '2', s: '@'}, {t: '3', s: '#'}, {t: '\', s: '|'}, '', '', '', '', '', '']
-  - ['', {t: '0', s: ')'}, {t: '-', s: '_'}, {type: held}, '', '']
+  - ['', {t: '0', s: ')'}, {t: '-', s: '_'}, {type: held}, CANCEL, '']
   NAV: 
-  - ['', Esc, '', '', '', '', '', '', '', '', ⌦, '']
+  - ['', Esc, '', '', '', '', '', '', '', ⌫, ⌦, '']
   - ['', {h: ⌘}, {h: ⎇}, {h: ⇧}, {h: ⌃}, '', LEFT, DOWN, UP, RIGHT, ⏎, '']
   - ['', '', '', '', '', '', HOME, PG DN, PG UP, END, INS, '']
-  - ['', {type: held}, '', '', '', '']
+  - ['', {type: held}, '', '', CANCEL, '']
   FUN:
-  - ['', F12, F7, F8, F9, '', BT CLR, '', '', '', '', '', '', F11, F4, F5, F6, '', OUT USB, {h: ⌃}, {h: ⇧}, {h: ⎇}, {h: ⌘}, '']
+  - ['', F12, F7, F8, F9, 'To Base', BT CLR, '', '', '', '', '', '', F11, F4, F5, F6, '', OUT USB, {h: ⌃}, {h: ⇧}, {h: ⎇}, {h: ⌘}, '']
   - ['', F10, F1, F2, F3, '', OUT BLE, BT 0, BT 1, BT 2, BT 3, '']
   - ['', {type: held}, '', {type: held}, '', '']
   MOUSE:
-  - ['', '', '', '', '', '', 'Scroll Left', 'Scroll Down', 'Scroll Up', 'Scroll Right', FWD, '']
+  - ['', '', '', '', '', 'To Base', 'Scroll Left', 'Scroll Down', 'Scroll Up', 'Scroll Right', FWD, '']
   - ['', {h: ⌘}, {h: ⎇}, {h: ⇧}, {h: ⌃}, '', 'LEFT', 'DOWN', 'UP', 'RIGHT', BACK, '']
   - ['', '', '', '', '', '', HOME, PG DN, PG UP, END, INS, '']
-  - ['', '', {type: held}, 'LCLK', 'RCLK', '']
+  - ['', '', {type: held}, 'LCLK', 'RCLK', 'MCLK']
 
 combos:
   - {p: [2, 3], k: "Esc", l: ["COMBOS"]}

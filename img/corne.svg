@@ -149,13 +149,13 @@ path {
 <text x="618.0" y="203.0" class="tap">H</text>
 <rect rx="6.0" ry="6.0" x="648.0" y="170.0" width="52.0" height="52.0" class=""/>
 <text x="674.0" y="196.0" class="tap">,</text>
-<text x="674.0" y="172.0" class="shifted">&lt;</text>
+<text x="674.0" y="172.0" class="shifted">;</text>
 <rect rx="6.0" ry="6.0" x="704.0" y="177.0" width="52.0" height="52.0" class=""/>
 <text x="730.0" y="203.0" class="tap">.</text>
-<text x="730.0" y="179.0" class="shifted">&gt;</text>
+<text x="730.0" y="179.0" class="shifted">:</text>
 <rect rx="6.0" ry="6.0" x="760.0" y="191.0" width="52.0" height="52.0" class=""/>
-<text x="786.0" y="217.0" class="tap">/</text>
-<text x="786.0" y="193.0" class="shifted">?</text>
+<text x="786.0" y="217.0" class="tap">?</text>
+<text x="786.0" y="193.0" class="shifted">!</text>
 <rect rx="6.0" ry="6.0" x="816.0" y="191.0" width="52.0" height="52.0" class=""/>
 <rect rx="6.0" ry="6.0" x="228.0" y="234.84799999999996" width="52.0" height="52.0" class=""/>
 <text x="254.0" y="260.84799999999996" class="tap">
@@ -385,6 +385,7 @@ path {
 </g>
 <g transform="rotate(-15.0, 584.4, 930.3861339178928)">
 <rect rx="6.0" ry="6.0" x="558.4" y="904.3861339178928" width="52.0" height="52.0" class=""/>
+<text x="584.4" y="930.3861339178928" class="tap">CANCEL</text>
 </g>
 <rect rx="6.0" ry="6.0" x="620.0" y="896.1541339178928" width="52.0" height="52.0" class=""/>
 </g>
@@ -401,6 +402,7 @@ path {
 <rect rx="6.0" ry="6.0" x="592.0" y="1056.959200876839" width="52.0" height="52.0" class=""/>
 <rect rx="6.0" ry="6.0" x="648.0" y="1049.959200876839" width="52.0" height="52.0" class=""/>
 <rect rx="6.0" ry="6.0" x="704.0" y="1056.959200876839" width="52.0" height="52.0" class=""/>
+<text x="730.0" y="1082.959200876839" class="tap">⌫</text>
 <rect rx="6.0" ry="6.0" x="760.0" y="1070.959200876839" width="52.0" height="52.0" class=""/>
 <text x="786.0" y="1096.959200876839" class="tap">⌦</text>
 <rect rx="6.0" ry="6.0" x="816.0" y="1070.959200876839" width="52.0" height="52.0" class=""/>
@@ -456,6 +458,7 @@ path {
 </g>
 <g transform="rotate(-15.0, 584.4, 1261.039200876839)">
 <rect rx="6.0" ry="6.0" x="558.4" y="1235.039200876839" width="52.0" height="52.0" class=""/>
+<text x="584.4" y="1261.039200876839" class="tap">CANCEL</text>
 </g>
 <rect rx="6.0" ry="6.0" x="620.0" y="1226.807200876839" width="52.0" height="52.0" class=""/>
 </g>
@@ -471,6 +474,8 @@ path {
 <rect rx="6.0" ry="6.0" x="256.0" y="1387.6122678357856" width="52.0" height="52.0" class=""/>
 <text x="282.0" y="1413.6122678357856" class="tap">F9</text>
 <rect rx="6.0" ry="6.0" x="312.0" y="1394.6122678357856" width="52.0" height="52.0" class=""/>
+<text x="338.0" y="1420.6122678357856" class="tap">
+<tspan x="338.0" dy="-0.6em">To</tspan><tspan x="338.0" dy="1.2em">Base</tspan></text>
 <rect rx="6.0" ry="6.0" x="536.0" y="1394.6122678357856" width="52.0" height="52.0" class=""/>
 <text x="562.0" y="1420.6122678357856" class="tap">
 <tspan x="562.0" dy="-0.6em">BT</tspan><tspan x="562.0" dy="1.2em">CLR</tspan></text>
@@ -550,6 +555,8 @@ path {
 <rect rx="6.0" ry="6.0" x="200.0" y="1711.265334794732" width="52.0" height="52.0" class=""/>
 <rect rx="6.0" ry="6.0" x="256.0" y="1718.265334794732" width="52.0" height="52.0" class=""/>
 <rect rx="6.0" ry="6.0" x="312.0" y="1725.265334794732" width="52.0" height="52.0" class=""/>
+<text x="338.0" y="1751.265334794732" class="tap">
+<tspan x="338.0" dy="-0.6em">To</tspan><tspan x="338.0" dy="1.2em">Base</tspan></text>
 <rect rx="6.0" ry="6.0" x="536.0" y="1725.265334794732" width="52.0" height="52.0" class=""/>
 <text x="562.0" y="1751.265334794732" class="tap">
 <tspan x="562.0" dy="-0.6em">Scroll</tspan><tspan x="562.0" dy="1.2em">Left</tspan></text>
@@ -621,5 +628,6 @@ path {
 <text x="584.4" y="1922.345334794732" class="tap">RCLK</text>
 </g>
 <rect rx="6.0" ry="6.0" x="620.0" y="1888.113334794732" width="52.0" height="52.0" class=""/>
+<text x="646.0" y="1914.113334794732" class="tap">MCLK</text>
 </g>
 </svg>
