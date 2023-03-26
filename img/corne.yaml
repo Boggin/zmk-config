@@ -25,7 +25,8 @@ layers:
   - ['', '', '', '', '', '', HOME, PG DN, PG UP, END, INS, '']
   - ['', {type: held}, '', '', CANCEL, '']
   FUN:
-  - ['', F12, F7, F8, F9, 'To Base', BT CLR, '', '', '', '', '', '', F11, F4, F5, F6, '', OUT USB, {h: ⌃}, {h: ⇧}, {h: ⎇}, {h: ⌘}, '']
+  - ['', F12, F7, F8, F9, 'To Base', BT CLR, '', '', '', '', '']
+  - ['', F11, F4, F5, F6, 'To Qwerty', OUT USB, {h: ⌃}, {h: ⇧}, {h: ⎇}, {h: ⌘}, '']
   - ['', F10, F1, F2, F3, '', OUT BLE, BT 0, BT 1, BT 2, BT 3, '']
   - ['', {type: held}, '', {type: held}, '', '']
   MOUSE:
@@ -33,6 +34,11 @@ layers:
   - ['', {h: ⌘}, {h: ⎇}, {h: ⇧}, {h: ⌃}, '', 'LEFT', 'DOWN', 'UP', 'RIGHT', BACK, '']
   - ['', '', '', '', '', '', HOME, PG DN, PG UP, END, INS, '']
   - ['', '', {type: held}, 'RCLK', 'LCLK', 'MCLK']
+  QWERTY:
+  - ['', Q, W, E, R, T, Y, U, I, O, P, '[']
+  - ['', A, S, D, F, G, H, J, K, L, ;, '''']
+  - ['', Z, X, C, V, B, N, M, ',', '.', '/', 'To Base']
+  - ['', ⎵, ↹, ⏎, ⇧, ⌫]
 
 combos:
   - {p: [2, 3], k: "Esc", l: ["COMBOS"]}
