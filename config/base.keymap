@@ -118,7 +118,7 @@ ZMK_BEHAVIOR(num_layer_word, hold_tap,
 // mouse layer that deactivates automatically on all other keys, requires PR #1366
 ZMK_BEHAVIOR(smart_mouse, tri_state,
     bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
-    ignored-key-positions = <KEYS_R RH0 RH1 RH2>;  // mouse keys
+    ignored-key-positions = <LT1 LT3 KEYS_R RH0 RH1 RH2>;  // mouse keys
     ignored-layers = <MOUSE>;
 )
 
