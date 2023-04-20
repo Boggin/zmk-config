@@ -30,8 +30,8 @@ layers:
   - ['', F10, F1, F2, F3, '', OUT BLE, BT 0, BT 1, BT 2, BT 3, '']
   - ['', {type: held}, '', {type: held}, '', '']
   MOUSE:
-  - ['', '', '', '', '', 'To Base', 'Scroll Left', 'Scroll Down', 'Scroll Up', 'Scroll Right', FWD, '']
-  - ['', {h: ⌘}, {h: ⎇}, {h: ⇧}, {h: ⌃}, '', 'LEFT', 'DOWN', 'UP', 'RIGHT', BACK, '']
+  - ['', '', '', '', '', 'To Base', 'Scroll Left', 'Scroll Down', 'Scroll Up', 'Scroll Right', '', '']
+  - ['', {h: ⌘}, {h: ⎇}, {h: ⇧}, {h: ⌃}, '', 'LEFT', 'DOWN', 'UP', 'RIGHT', '', '']
   - ['', '', '', '', '', '', HOME, PG DN, PG UP, END, INS, '']
   - ['', '', {type: held}, 'RCLK', 'LCLK', 'MCLK']
   QWERTY:
@@ -41,12 +41,14 @@ layers:
   - ['', ⎵, ↹, ⏎, ⇧, ⌫]
 
 combos:
+  - {p: [2, 4], k: "Smart Mouse", l: ["COMBOS"], 'a': 'top', 'o': 0.2}
   - {p: [2, 3], k: "Esc", l: ["COMBOS"]}
   - {p: [3, 4], k: "↹", l: ["COMBOS"]}
   - {p: [2, 14], k: "@", l: ["COMBOS"]}
   - {p: [3, 15], k: "#", l: ["COMBOS"]}
   - {p: [4, 16], k: "$", l: ["COMBOS"]}
   - {p: [5, 17], k: "%", l: ["COMBOS"]}
+  - {p: [14, 15], k: "rpt", l: ["COMBOS"]}
   - {p: [15, 16], k: "⏎", l: ["COMBOS"]}
   - {p: [14, 26], k: "`", l: ["COMBOS"]}
   - {p: [15, 27], k: "\\", l: ["COMBOS"]}
@@ -61,6 +63,8 @@ combos:
   - {p: [8, 9], k: "}", l: ["COMBOS"]}
   - {p: [19, 20], k: "(", l: ["COMBOS"]}
   - {p: [20, 21], k: ")", l: ["COMBOS"]}
+  - {p: [19, 20], k: "<", l: ["NAV"]}
+  - {p: [20, 21], k: ">", l: ["NAV"]}
   - {p: [31, 32], k: "[", l: ["COMBOS"]}
   - {p: [32, 33], k: "]", l: ["COMBOS"]}
   - {p: [6, 18], k: "^", l: ["COMBOS"]}
