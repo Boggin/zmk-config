@@ -148,13 +148,6 @@ ZMK_BEHAVIOR(copy_cut, tap_dance,
     bindings = <&kp LC(INS)>, <&kp LC(X)>;
 )
 
-// Windows sleep key
-ZMK_BEHAVIOR(win_sleep, macro,
-    wait-ms = <100>;
-    tap-ms = <5>;
-    bindings = <&kp LG(X) &kp U &kp S>;
-)
-
 // tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
 ZMK_BEHAVIOR(comma_inner_morph, mod_morph,
     bindings = <&kp SEMICOLON>, <&kp LESS_THAN>;
