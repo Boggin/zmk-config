@@ -426,7 +426,9 @@ path.combo {
 <text x="114.0" y="1130.559200876839" class="tap">Esc</text>
 <rect rx="6.0" ry="6.0" x="144.0" y="1090.559200876839" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="200.0" y="1083.559200876839" width="52.0" height="52.0" class="key"/>
+<text x="226.0" y="1109.559200876839" class="tap">PWin</text>
 <rect rx="6.0" ry="6.0" x="256.0" y="1090.559200876839" width="52.0" height="52.0" class="key"/>
+<text x="282.0" y="1116.559200876839" class="tap">NWin</text>
 <rect rx="6.0" ry="6.0" x="312.0" y="1097.559200876839" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="536.0" y="1097.559200876839" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="592.0" y="1090.559200876839" width="52.0" height="52.0" class="key"/>
