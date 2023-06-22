@@ -93,6 +93,12 @@ MASK_MODS(masked_end,  (MOD_LCTL), &kp END)
 
 /* Custom behaviors */
 
+// Alt+Tab swapper, requires PR #1366
+ZMK_BEHAVIOR(swapper, tri_state,
+    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+    ignored-key-positions = <LT2>;
+)
+
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
 ZMK_BEHAVIOR(num_dance, tap_dance,
     tapping-term-ms = <200>;
@@ -148,23 +154,15 @@ ZMK_BEHAVIOR(copy_cut, tap_dance,
     bindings = <&kp LC(INS)>, <&kp LC(X)>;
 )
 
-// tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
-ZMK_BEHAVIOR(comma_inner_morph, mod_morph,
-    bindings = <&kp SEMICOLON>, <&kp LESS_THAN>;
-    mods = <(MOD_LCTL|MOD_RCTL)>;
-)
+// tap: comma | shift + tap: semicolon
 ZMK_BEHAVIOR(comma_morph, mod_morph,
+    bindings = <&kp COMMA>, <&kp SEMICOLON>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
-    bindings = <&kp COMMA>, <&comma_inner_morph>;
 )
 
-// tap: dot | shift + tap: colon | ctrl + shift + tap: >
-ZMK_BEHAVIOR(dot_inner_morph, mod_morph,
-    bindings = <&kp COLON>, <&kp GREATER_THAN>;
-    mods = <(MOD_LCTL|MOD_RCTL)>;
-)
+// tap: dot | shift + tap: colon
 ZMK_BEHAVIOR(dot_morph, mod_morph,
-    bindings = <&kp DOT>, <&dot_inner_morph>;
+    bindings = <&kp DOT>, <&kp COLON>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
@@ -174,17 +172,8 @@ ZMK_BEHAVIOR(qexcl, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
-// Alt+Tab swapper, requires PR #1366
-ZMK_BEHAVIOR(swap, tri_state,
-    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-    ignored-key-positions = <LT2>;
-)
-
 // misc aliases
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
-#define DSK_PREV    &hmr RSHFT LG(LC(LEFT))  // previous desktop
-#define DSK_NEXT    &hmr LALT LG(LC(RIGHT))  // next     desktop
-#define VOL_DOWN    &hmr LCTRL C_VOL_DN
 
 /* Caps-word, num-word and smart-mouse */
 
@@ -234,7 +223,7 @@ ZMK_LAYER(num,
 
 ZMK_LAYER(nav,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp ESC       ___           ___           ___           ___        X_MT     ___          ___           ___          NAV_BSPC     NAV_DEL       X_RT
+    X_LT     &kp ESC       ___         &kp LS(TAB)   &swapper        ___        X_MT     ___          ___           ___          NAV_BSPC     NAV_DEL       X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &sk LGUI      &sk LALT    &sk LSHFT     &sk LCTRL       ___        X_MM     NAV_LEFT     NAV_DOWN      NAV_UP       NAV_RIGHT    &kp RET       X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
