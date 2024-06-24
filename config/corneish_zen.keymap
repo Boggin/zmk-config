@@ -5,8 +5,8 @@
 #define HYP(key) LG(LA(LS(LC(key))))
 
 /* map Zen's extra keys */
-#define X_LH  &smart_mouse  // thumb row, left
-#define X_RH  &bs_del       // thumb row, right
+#define X_LH  &none         // thumb row, left
+#define X_RH  &none         // thumb row, right
 #define X_LT  &kp MEH(Q)    // toggle mic+cam
 #define X_LM  &kp MEH(A)    // toggle mic
 #define X_LB  &mo QWERTY    // toggle QWERTY
