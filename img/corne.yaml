@@ -3,12 +3,12 @@ layout:
   qmk_layout: LAYOUT_split_3x6_3
 layers:
   BASE:
-  - [Toggle mic+cam, Q, W, F, P, B, J, L, U, Y, {t: '''', s: '"'}, '']
+  - [Toggle mic+cam, Q, W, F, P, B, J, L, U, Y, {t: '''', s: '"'}, To Nav]
   - [Toggle mic, {t: A, h: ⌘}, {t: R, h: ⎇}, {t: S, h: ⇧}, {t: T, h: ⌃}, G, 
      M, {t: N, h: ⌃}, {t: E, h: ⇧}, {t: I, h: ⎇}, {t: O, h: ⌘}, Toggle camera]
   - [Hold qwerty, Z, X, C, D, V, K, H, {t: ',', s: ';'}, {t: '.', s: ':'}, {t: '?', s: '!'}, '']
-  - ['', {t: ⎵, h: NAV}, {t: ↹, h: MOUSE},
-     {t: Smart Num, h: NUM}, {t: Smart Shift, h: ⇧}, '']
+  - [Esc, {t: ⎵, h: NAV}, {t: ↹, h: MOUSE},
+     {t: Smart Num, h: NUM}, {t: Smart Shift, h: ⇧}, {t: '⌫', s: '⌦'}]
   COMBOS:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
   - ['', '', '', '', '', '', '', '', '', '', '', '']
@@ -20,25 +20,25 @@ layers:
   - ['', {t: '`', s: '~'}, {t: '1', s: '!'}, {t: '2', s: '@'}, {t: '3', s: '#'}, {t: '\', s: '|'}, '', '', '', '', '', '']
   - ['', '', '', {type: held}, CANCEL, '']
   NAV: 
-  - ['', Esc, '', PWin, NWin, '', '', '', '', ⌫, ⌦, '']
+  - ['', Esc, '', PWin, NWin, '', 'To Base', '', '', ⌫, ⌦, '']
   - ['', {h: ⌘}, {h: ⎇}, {h: ⇧}, {h: ⌃}, '', LEFT, DOWN, UP, RIGHT, ⏎, '']
   - ['', '', '', '', '', '', HOME, PG DN, PG UP, END, INS, '']
   - ['', {type: held}, '', '', CANCEL, '']
   FUN:
-  - ['', F12, F7, F8, F9, 'To Base', BT CLR, BT CLR ALL, '', '', '', '']
+  - ['', F12, F7, F8, F9, 'To Base', BT CLR, '', '', '', '', '']
   - ['', F11, F4, F5, F6, 'To Qwerty', OUT USB, {h: ⌃}, {h: ⇧}, {h: ⎇}, {h: ⌘}, '']
-  - ['', F10, F1, F2, F3, '', OUT BLE, BT 0, BT 1, BT 2, BT 3, '']
+  - ['', F10, F1, F2, F3, '', OUT BLE, BT 0, BT 1, BT 2, BT 3, BT 4]
   - ['', {type: held}, '', {type: held}, '', '']
   MOUSE:
   - ['', '', '', '', '', 'To Base', 'Scroll Left', 'Scroll Down', 'Scroll Up', 'Scroll Right', '', '']
   - ['', {h: ⌘}, {h: ⎇}, {h: ⇧}, {h: ⌃}, '', 'LEFT', 'DOWN', 'UP', 'RIGHT', '', '']
   - ['', '', '', '', '', '', HOME, PG DN, PG UP, END, INS, '']
-  - ['', '', {type: held}, 'RCLK', 'LCLK', '']
+  - ['', '', {type: held}, 'RCLK', 'LCLK', 'MCLK']
   QWERTY:
   - ['', Q, W, E, R, T, Y, U, I, O, P, '[']
   - ['', A, S, D, F, G, H, J, K, L, ;, '''']
   - ['', Z, X, C, V, B, N, M, ',', '.', '/', 'To Base']
-  - ['', ⎵, ↹, ⏎, ⇧, '']
+  - ['', ⎵, ↹, ⏎, ⇧, ⌫]
 
 combos:
   - {p: [2, 4], k: "Smart Mouse", l: ["COMBOS"], 'a': 'top', 'o': 0.2}
