@@ -6,7 +6,7 @@ layers:
   - [Toggle mic+cam, Q, W, F, P, B, J, L, U, Y, {t: '''', s: '"'}, To Nav]
   - [Toggle mic, {t: A, h: ⌘}, {t: R, h: ⎇}, {t: S, h: ⇧}, {t: T, h: ⌃}, G, 
      M, {t: N, h: ⌃}, {t: E, h: ⇧}, {t: I, h: ⎇}, {t: O, h: ⌘}, Toggle camera]
-  - [Hold qwerty, Z, X, C, D, V, K, H, {t: ',', s: ';'}, {t: '.', s: ':'}, {t: '?', s: '!'}, '']
+  - [Hold qwerty, Z, X, C, D, V, K, H, {t: ',', s: ';'}, {t: '.', s: ':'}, {t: '?', s: '!'}, To Mouse]
   - [Esc, {t: ⎵, h: NAV}, {t: ↹, h: MOUSE},
      {t: Smart Num, h: NUM}, {t: Smart Shift, h: ⇧}, {t: '⌫', s: '⌦'}]
   COMBOS:

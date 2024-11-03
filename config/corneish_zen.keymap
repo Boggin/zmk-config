@@ -12,7 +12,7 @@
 #define X_LB  &mo QWERTY    // toggle QWERTY
 #define X_RT  &to NAV       // toggle NAV
 #define X_RM  &kp MEH(O)    // toggle cam
-#define X_RB  &none
+#define X_RB  &to MOUSE     // toggle MOUSE
 
 /* activate bluetooth */
 #define CONFIG_WIRELESS 1
